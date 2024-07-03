@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+/*VARIABLES*/
+:root /*Es como poner "html", pero da más prioridad*/{
+    --font-family: "Roboto", sans-serif; /*Es la familia del tipo de fuente que se quiere usar. Como escoger el tipo de fuente en word jejej*/
+    --normal-font:400; /*Ayuda a poner un tamaño de fuente predeterminado para el texto*/
+    --bold-font: 700; /*Se le pone a las partes del escrito que quiero que se vean en negritas, además del tamaño que debe tener*/
+    --bolder-font: 900; /*BOLDER es para los textos que quiero aún más remarcados en negritas*/
+    --bg-color: #fcfcfc; /*Es el color del fondo de toda la página*/
+    --primary-color: #4756df; /*Color predeterminado como primario. Se puede poner en el elemento que yo desee que lleve este color*/
+    --secondary-color: #ff7235; /*Color predeterminado como secundario. Se puede poner en el elemento que yo desee que lleve este color*/
+    --primary-shadow: #8b8eaf; /*SHADOW hace referencia a "sombra", entonces, esta etiqueta es el color primario de la sombra de algún elemento.*/
+    --secondary-shadow: #a17a69; /*SHADOW hace referencia a "sombra", entonces, esta etiqueta es el color secundario de la sombra de algún elemento.*/
+    --bottom-margin: 0.5rem; /*Es el tamaño de la parte de arriba del margen. 1REM equivale a 16PX*/
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem; /*Es como el interlineado en word jejejj*/
+    --transition: 0.3s; /*Literalmente es una transición para algún elemento. Se puede escoger la duración de esta*/
+}
+
+html{
+    scroll-behavior: smooth; /*Ayuda a que, cuando el usuario cambie de páginas, la transición sea más amena*/
+}
+
+*{  margin: 0; /*Margen de la página*/ /*El ASTERISCO se pone para seleccionar todos los elementos de un documento*/
+    padding: 0; /*Espacio al rededor del contenido de un elemento. Tiene relleno de arriba, abajo, izquierda y derecha.*/
+    box-sizing: border-box; /*Es el tamaño de las cajas. BORDER-BOX significa que el mañano se mantendrá estable*/
+}
+
+ul{ /*Lista desordenada*/
+    list-style-type: none; /*Es lo que determina si la lista va a tener los puntitos o no. Por eso se le puso "none"*/
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover{
+    color: var(--secondary-color);
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+/*NAVBAR*/
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow:space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+nav h1{
+    color: var(--primary-color);
+}
+
+nav a{ 
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover{
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display:flex;
+    gap: 1.9rem;
+}
+
+nav ul li{
+    font-weight: var(--bold-font);
+}
+
+/*ESCONDER BOTÓN DE HAMBURGUESA*/
+.burger-menu{
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor:pointer;
+    display:none;
+}
+/*FIN DE NAVBAR, shiiiuuuuuu*/
+
+/*INICIO DEL HERO*/
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 68.5rem;
+    margin: auto;
+}
+
+.hero-img{
+    height: 19rem;
+    width: 15rem;
+}
+.bio{
+    width: 22rem;
+    padding: 0.625rem;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    border-radius: 8px;
+
+}
+
+.bio h1{
+    margin-bottom: var(--bottom-margin);
+
+}
+
+.bio p{
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
+}
+/*{}*/
+/*SOBRE MI*/
+.more-about{
+    background-color: var(--bg-color);
+    padding: 1rem 6rem;
+}
+
+.more-about h2{
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+}
+
+.more-about p{
+    line-height: var(--line-height);
+    padding: 0.4rem;
+    text-align: center;
+}
+/*{}*/
+/*SKILL SECTION*/
+.skills{
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.skill-header{
+    margin-bottom: 1rem;
+}
+
+.skills-wrapper img{
+    padding: 1.25rem;
+}
+
+.icon{
+    width: 11.875rem;
+    height: 11.25rem;
+}
+
+.icon-card{
+    background-color: #fff;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    border-radius: 11px;
+    padding: 20px;
+    margin: 10px;
+}
+/*{}*/
+/*Project section*/
+.projects{
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+}
+
+.project-pic1{
+    width: 400px;
+    height: 255px;
+}
+
+.project-pic2{
+    width: 400px;
+    height: 255px;
+}
+
+.project-pic3{
+    width: 400px;
+    height: 255px;
+}
+
+.projects-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects style{
+    text-align: center;
+} 
+
+.projects-tittle{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.proyect-container{
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}
+
+.projects-container p{
+    padding: 0.4rem;
+}
+
+.project-tittle{
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-details{
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-card{
+    background-color: #fff;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    border-radius: 11px;
+    padding: 20px;
+    margin: 10px;
+}
+/*{}*/
+.socials{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+}
+
+.socicon{
+    width: 3rem;
+    height: 3rem;
+}
+
+.socicon:hover{
+    background-color: #767676;
+    cursor: pointer;
+    border-radius: 11px;
+}
+
+footer{
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+}
+
+/*{}*/
+/*SCROLL BUTTON*/
+.scroll-up{
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.up-arrow{
+    width: 3rem;
+    height: 3rem;
+}
+/*{}*/
+/*MEDIA QUERIES FOR RESPONSIVENESS*/
+/*PARA QUE LA PÁGINA SE VEA BONITA EN TODOS LOS TAMAÑOS DE PANTALLAS*/
+@media screen and (max-width: 720px){
+    nav{
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul{
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li{
+        margin: 8px;
+    }
+
+    .burger-menu{
+        display: block;
+    }
+
+    nav ul.show{
+        transform: translateX(0);
+    }
+
+    .hero{
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero img{
+        height: 20rem;
+        width: 15rem;
+    }
+
+    .bio{
+        margin-top: 3rem;
+        width: 20.5rem;
+    }
+
+    .more-about {
+        margin-top: 2rem;
+        padding: 1rem 3.5rem;
+    }
+
+    .more-about h2{
+        text-align: center;
+    }
+
+    .more-about p{
+        text-align: justify;
+    }
+
+    .icon{
+        width: 5.875rem;
+        height: 5.25rem;
+    }
+
+    .projects-container{
+        flex-direction: column;
+    }
+
+    .proyect-container{
+        width: 20.875rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .hero img{
+        height: 15rem;
+        width:10rem;
+    }
+
+    .bio{
+        width: 18.3rem;
+    }
+
+    .project-container{
+        width:17.875rem;
+    }
+}
+
+/*{}*/
